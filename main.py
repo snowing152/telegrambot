@@ -23,8 +23,7 @@ translator = GoogleTranslator(target="ru")
 def cmd_start(message):
     with open("users.txt", "a") as file:
         user_id = message.from_user.id
-        user_name = f"{message.from_user.first_name} {
-            message.from_user.last_name}"
+        user_name = f"{message.from_user.first_name} {message.from_user.last_name}"
         file.write(f"{user_id}, {user_name}\n")
 
 
